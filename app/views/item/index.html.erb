@@ -1,0 +1,10 @@
+<h1>Items</h1>
+
+<% @items.each do |item| %>
+
+<div>
+  <%= link_to(item.name, "#") %>
+  <p><%= item.price.to_i %></p>
+  <%= image_tag url_for(item.image), width: "200px" %>
+</div>
+<% end %>
