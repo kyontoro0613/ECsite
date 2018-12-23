@@ -1,5 +1,11 @@
 <h1>Items</h1>
 
+<%= form_tag(item_index_path, method: "get") do %>
+<%= text_field_tag :name, params[:name] %>
+ <%#= select_tag 'page[name]', options_for_select([["Railsの基礎", "rails_base"], ["Rubyの基礎", "ruby_base"]]) %>
+<%= submit_tag "検索" %>
+<% end %>
+
 <% @items.each do |item| %>
 
 <div>
