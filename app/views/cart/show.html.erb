@@ -1,0 +1,10 @@
+<h1>Cart index</h1>
+<% @cart_items.each do |cart_item| %>
+
+<div>
+  <%= link_to(cart_item.item.name, "/item/#{cart_item.item.id}") %>
+  <p><%= cart_item.item.price.to_i %></p>
+    <p><%= cart_item.number %></p>
+  <%= image_tag url_for(cart_item.item.image), width: "200px" %>
+</div>
+<% end %>
